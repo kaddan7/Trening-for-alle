@@ -1,61 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <title>Trening</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .container {
-      max-width: 480px;
-      margin: auto;
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-      padding: 44px 26px 36px 26px;
-      text-align: center;
-    }
-    h1 {
-      color: #1a3c6c;
-      margin-bottom: 1em;
-    }
-    p {
-      color: #34495e;
-      font-size: 1.1em;
-      margin-bottom: 2em;
-    }
-    .button {
-      display: inline-block;
-      padding: 13px 32px;
-      background: linear-gradient(90deg, #007bff 60%, #00d6ff 100%);
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.09em;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s, box-shadow 0.2s;
-    }
-    .button:hover {
-      background: linear-gradient(90deg, #0056b3 60%, #009acb 100%);
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enkel Trening for Alle</title>
+  <meta name="description" content="Gratis treningsprogrammer, skadeforebyggende øvelser og tips for styrke, løping og sykling." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body>
-  <div class="container">
-    <h1>Velkommen til Treningssiden</h1>
-    <p>Her kan du finne treningsprogrammer, øvelser og tips!</p>
-    <a href="/Trening-for-alle/" class="button">Tilbake til forsiden</a>
-  </div>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-800 font-sans">
+  <!-- NAV -->
+  <header class="shadow-md bg-white/70 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2 font-extrabold text-indigo-600 text-xl tracking-wide">Enkel Trening for Alle</a>
+        <nav class="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#programmer" class="hover:text-indigo-600 transition">Programmer</a>
+          <a href="#skadeforebygging" class="hover:text-indigo-600 transition">Skadeforebygging</a>
+          <a href="#blogg" class="hover:text-indigo-600 transition">Blogg</a>
+          <a href="#kontakt" class="px-4 py-2 bg-indigo-600 text-white rounded-full shadow hover:shadow-lg hover:scale-105 transition">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Hero bakgrunn" class="w-full h-full object-cover opacity-30" />
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 py-28 text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-gray-900 drop-shadow-lg">Tren smart. Bygg styrke. Unngå skader.</h1>
+      <p class="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">Gratis planer for styrke, utholdenhet og skadeforebygging. Perfekt for ungdom, mosjonister og idrettsutøvere.</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="#programmer" class="px-8 py-4 bg-indigo-600 text-white rounded-full text-lg font-semibold shadow hover:scale-105 hover:bg-indigo-700 transition">Se programmer</a>
+        <a href="#skadeforebygging" class="px-8 py-4 bg-white text-indigo-600 border border-indigo-600 rounded-full text-lg font-semibold hover:scale-105 hover:shadow transition">Unngå skader</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMER -->
+  <section id="programmer" class="mt-24 max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-center">Populære Treningsprogrammer</h2>
+    <p class="mt-2 text-gray-600 text-center">Velg en plan som passer deg best og last ned gratis.</p>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+        <div class="flex justify-center mb-4">
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_zrqthn6o.json" background="transparent" speed="1" style="width:80px;height:80px" loop autoplay></lottie-player>
+        </div>
+        <h3 class="font-bold text-xl text-center">Styrkeprogram (3 dager)</h3>
+        <p class="mt-3 text-sm text-gray-600 text-center">Helkroppsprogram for å bygge styrke og muskelmasse.</p>
+        <button class="mt-6 w-full px-4 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition">Last ned PDF</button>
+      </div>
+      <div class="group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+        <div class="flex justify-center mb-4">
+          <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jtbfg2nb.json" background="transparent" speed="1" style="width:80px;height:80px" loop autoplay></lottie-player>
+        </div>
+        <h3 class="font-bold text-xl text-center">5 km løpeplan</h3>
+        <p class="mt-3 text-sm text-gray-600 text-center">8-ukers plan for nybegynnere og viderekomne.</p>
+        <button class="mt-6 w-full px-4 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition">Last ned PDF</button>
+      </div>
+      <div class="group p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition">
+        <div class="flex justify-center mb-4">
+          <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent" speed="1" style="width:80px;height:80px" loop autoplay></lottie-player>
+        </div>
+        <h3 class="font-bold text-xl text-center">45 min sykkeløkt</h3>
+        <p class="mt-3 text-sm text-gray-600 text-center">Intervalløkt for utholdenhet og eksplosivitet.</p>
+        <button class="mt-6 w-full px-4 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition">Last ned PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKADEFOREBYGGING -->
+  <section id="skadeforebygging" class="mt-24 bg-gradient-to-r from-indigo-600 to-purple-600 py-20 text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-center">Skadeforebyggende Øvelser</h2>
+      <p class="mt-2 text-indigo-100 text-center">Styrk stabilitet, mobilitet og unngå unødvendige avbrekk.</p>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white/10 rounded-xl shadow-md hover:scale-105 transition">
+          <h3 class="font-semibold text-xl">Kne & Hofte</h3>
+          <p class="mt-3 text-sm text-indigo-100">Utfall, glute bridge og balanseøvelser.</p>
+        </div>
+        <div class="p-6 bg-white/10 rounded-xl shadow-md hover:scale-105 transition">
+          <h3 class="font-semibold text-xl">Skuldre & Rygg</h3>
+          <p class="mt-3 text-sm text-indigo-100">Face pulls, Y-T-W og mobilitetstrening.</p>
+        </div>
+        <div class="p-6 bg-white/10 rounded-xl shadow-md hover:scale-105 transition">
+          <h3 class="font-semibold text-xl">Generell Mobilitet</h3>
+          <p class="mt-3 text-sm text-indigo-100">Dynamisk stretching for bedre bevegelighet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOGG -->
+  <section id="blogg" class="mt-24 max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="text-3xl font-extrabold text-center">Nyeste Artikler</h2>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <article class="p-6 bg-white rounded-2xl shadow hover:shadow-xl hover:-translate-y-2 transition">
+        <h3 class="font-bold text-lg">Hvordan bygge en treningsrutine</h3>
+        <p class="mt-2 text-sm text-gray-600">Tips for å etablere vaner som varer.</p>
+      </article>
+      <article class="p-6 bg-white rounded-2xl shadow hover:shadow-xl hover:-translate-y-2 transition">
+        <h3 class="font-bold text-lg">5 vanlige løpeskader</h3>
+        <p class="mt-2 text-sm text-gray-600">Og hvordan du kan unngå dem.</p>
+      </article>
+      <article class="p-6 bg-white rounded-2xl shadow hover:shadow-xl hover:-translate-y-2 transition">
+        <h3 class="font-bold text-lg">Hvorfor basistrening er viktig</h3>
+        <p class="mt-2 text-sm text-gray-600">Enkelt forklart for ungdom og mosjonister.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="mt-24 bg-gradient-to-r from-purple-50 to-indigo-50 py-20">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-2xl font-extrabold text-gray-900">Kontakt oss</h2>
+        <p class="mt-2 text-sm text-gray-600">Spørsmål eller ønsker til nye programmer? Send oss en melding.</p>
+        <form class="mt-6 flex flex-col gap-4">
+          <input type="text" placeholder="Navn" required class="px-4 py-3 border rounded-lg" />
+          <input type="email" placeholder="E-post" required class="px-4 py-3 border rounded-lg" />
+          <textarea placeholder="Melding" rows="4" required class="px-4 py-3 border rounded-lg"></textarea>
+          <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-24 border-t py-10 bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>© <span id="year"></span> Enkel Trening for Alle — Tren smart. Unngå skader.</div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white transition">Instagram</a>
+        <a href="#" class="hover:text-white transition">YouTube</a>
+        <a href="#" class="hover:text-white transition">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
