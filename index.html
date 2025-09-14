@@ -72,5 +72,67 @@
     <p>Velkommen til ditt enkle treningsverktøy. Trykk under for å starte!</p>
     <a href="/Trening-for-alle/trening.html" class="button">Kom i gang</a>
   </div>
+  <!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trening for Alle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .menu button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .section {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Trening for Alle</h1>
+  <p>Velg nivå for å se treningsprogram:</p>
+
+  <div class="menu">
+    <button onclick="showSection('nybegynner')">Nybegynner</button>
+    <button onclick="showSection('middels')">Middels</button>
+    <button onclick="showSection('avansert')">Avansert</button>
+  </div>
+
+  <div id="nybegynner" class="section">
+    <h2>Nybegynnerprogram</h2>
+    <p>Øvelser: Knebøy, Push-ups, Tøying.</p>
+  </div>
+
+  <div id="middels" class="section">
+    <h2>Middels program</h2>
+    <p>Øvelser: Utfall, Planke, Burpees.</p>
+  </div>
+
+  <div id="avansert" class="section">
+    <h2>Avansert program</h2>
+    <p>Øvelser: Markløft, Pull-ups, Sprintintervaller.</p>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+
 </body>
 </html>
+
+
