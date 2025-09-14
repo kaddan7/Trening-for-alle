@@ -167,5 +167,200 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+  <!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trening for Alle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .menu button {
+      margin: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .menu button:hover {
+      background-color: #0056b3;
+    }
+    .section {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    ul ul {
+      list-style-type: circle;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Trening for Alle</h1>
+  <p>Velg program for å se detaljer:</p>
+
+  <div class="menu">
+    <button onclick="showSection('nybegynner')">Nybegynner</button>
+    <button onclick="showSection('middels')">Middels</button>
+    <button onclick="showSection('avansert')">Avansert</button>
+    <button onclick="showSection('sykkel')">Sykkelprogram</button>
+    <button onclick="showSection('loping')">Løpeprogram</button>
+  </div>
+
+  <!-- Nybegynner -->
+  <div id="nybegynner" class="section">
+    <h2>Nybegynnerprogram</h2>
+    <p><strong>Fokus:</strong> grunnleggende styrke, bevegelighet og kondisjon</p>
+    <p><strong>Varighet:</strong> ca. 20–30 minutter</p>
+    <ul>
+      <li><strong>Oppvarming (5 min):</strong> Gå på stedet, lett jogging, arm- og bensving</li>
+      <li><strong>Hoveddel (15–20 min):</strong>
+        <ul>
+          <li>Knebøy: 3 sett × 10 repetisjoner</li>
+          <li>Push-ups mot vegg eller knær: 3 × 8–10</li>
+          <li>Tåhev: 3 × 12</li>
+          <li>Planke på knær: 3 × 20 sek</li>
+          <li>Enkle utfall: 3 × 8 per ben</li>
+        </ul>
+      </li>
+      <li><strong>Nedtrapping (5 min):</strong> Tøying av ben, armer og rygg</li>
+    </ul>
+  </div>
+
+  <!-- Middels -->
+  <div id="middels" class="section">
+    <h2>Middels program</h2>
+    <p><strong>Fokus:</strong> styrke, utholdenhet og stabilitet</p>
+    <p><strong>Varighet:</strong> ca. 30–40 minutter</p>
+    <ul>
+      <li><strong>Oppvarming (5–10 min):</strong> Lett jogging, dynamisk tøying</li>
+      <li><strong>Hoveddel (20–25 min):</strong>
+        <ul>
+          <li>Knebøy med egen kroppsvekt: 3 × 12</li>
+          <li>Push-ups: 3 × 10–12</li>
+          <li>Planke: 3 × 30 sek</li>
+          <li>Utfall fremover: 3 × 10 per ben</li>
+          <li>Superman-rygghev: 3 × 12</li>
+        </ul>
+      </li>
+      <li><strong>Nedtrapping (5–10 min):</strong> Tøying og lett gange</li>
+    </ul>
+  </div>
+
+  <!-- Avansert -->
+  <div id="avansert" class="section">
+    <h2>Avansert program</h2>
+    <p><strong>Fokus:</strong> styrke, eksplosivitet og utholdenhet</p>
+    <p><strong>Varighet:</strong> ca. 40–50 minutter</p>
+    <ul>
+      <li><strong>Oppvarming (10 min):</strong> Jogging, dynamiske bevegelser, hoppeøvelser</li>
+      <li><strong>Hoveddel (25–30 min):</strong>
+        <ul>
+          <li>Markløft med manualer eller vektstang: 3 × 8</li>
+          <li>Pull-ups eller assisterte pull-ups: 3 × 6–8</li>
+          <li>Benkpress eller push-ups med klapp: 3 × 10</li>
+          <li>Burpees: 3 × 12</li>
+          <li>Planke med sidehev: 3 × 30 sek per side</li>
+        </ul>
+      </li>
+      <li><strong>Nedtrapping (5–10 min):</strong> Lett jogging, tøying av hele kroppen</li>
+    </ul>
+  </div>
+
+  <!-- Sykkel -->
+  <div id="sykkel" class="section">
+    <h2>Sykkelprogram</h2>
+    <p><strong>Fokus:</strong> utholdenhet, styrke i ben og skadeforebygging</p>
+    <p><strong>Varighet:</strong> 30–60 minutter</p>
+    <ul>
+      <li><strong>Oppvarming (5–10 min):</strong> Lett sykling, gradvis økende tempo</li>
+      <li><strong>Hoveddel:</strong>
+        <ul>
+          <li>Rolig sykling: 10 min</li>
+          <li>Intervaller: 5 × 2 min hard sykling, 2 min rolig</li>
+          <li>Styrke i ben: 3 × 10 squats uten vekt eller med lett belastning</li>
+          <li>Tempo-sykling: 10–15 min jevnt høy fart</li>
+        </ul>
+      </li>
+      <li><strong>Nedtrapping (5–10 min):</strong> Rolig sykling, tøying av lår og legger</li>
+    </ul>
+  </div>
+
+  <!-- Løping -->
+  <div id="loping" class="section">
+    <h2>Løpeprogram</h2>
+    <p><strong>Fokus:</strong> kondisjon, utholdenhet og skadeforebygging</p>
+    <p><strong>Varighet:</strong> 20–45 minutter</p>
+    <ul>
+      <li><strong>Oppvarming (5 min):</strong> Gå/jogge lett, dynamiske bevegelser</li>
+      <li><strong>Hoveddel:</strong>
+        <ul>
+          <li>Rolig jogg: 10–15 min</li>
+          <li>Intervaller: 4 × 1–2 min rask løping, 2 min gange/jogg</li>
+          <li>Bakkeintervaller (valgfritt): 5 × 30 sek oppover, rolig ned</li>
+          <li>Fartslek: 5–10 min, varier tempo mellom rolig og rask</li>
+        </ul>
+      </li>
+      <li><strong>Nedtrapping (5 min):</strong> Gå lett, tøying av legger, lår og hofter</li>
+    </ul>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+  <div class="menu">
+  <button onclick="showSection('skade')">Skadeforebygging</button>
+</div>
+
+<div id="skade" class="section">
+  <h2>Skadeforebygging</h2>
+  <p>Her finner du tips og øvelser for å forebygge vanlige skader ved løping og sykling.</p>
+  
+  <h3>🦵 Løping</h3>
+  <p><strong>Fokus:</strong> styrke, balanse og fleksibilitet for knær, ankler og legger</p>
+  <ul>
+    <li><strong>Ettbens balanse:</strong> Stå på ett ben i 30 sekunder, bytt ben. Gjenta 3 ganger per ben.</li>
+    <li><strong>Knebøy med tåhev:</strong> Utfør en knebøy, løft deretter hælene og stå på tærne. 15–20 repetisjoner.</li>
+    <li><strong>Nordic hamstring:</strong> Senk kroppen sakte fremover mens føttene holdes i bakken. Bruk hendene for støtte. 5–8 repetisjoner.</li>
+  </ul>
+  <p>Mer info: <a href="https://www.skadefri.no/idretter/loping/" target="_blank">Skadefri.no – Løping</a></p>
+
+  <h3>🚴‍♂️ Sykling</h3>
+  <p><strong>Fokus:</strong> styrke i ben, kjernemuskulatur og hofter</p>
+  <ul>
+    <li><strong>Seteløft på ett ben:</strong> Løft setet sakte på ett ben, hold i 5 sek, bytt ben. 3 × 10</li>
+    <li><strong>Kjernestyrke:</strong> Planke 3 × 30 sek, sideplanke 3 × 20 sek per side</li>
+    <li><strong>Hoftestabilitet:</strong> Liggende benløft eller monster walks med strikk 3 × 12</li>
+  </ul>
+  <p>Mer info: <a href="https://www.skadefri.no/idretter/sykling/" target="_blank">Skadefri.no – Sykling</a></p>
+</div>
+
+
+</body>
+</html>
+
 </body>
 </html>
