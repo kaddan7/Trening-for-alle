@@ -2,53 +2,75 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>Startside</title>
+  <title>Trening for alle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f8f9fa;
+      background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
       margin: 0;
       padding: 0;
+      min-height: 100vh;
     }
     .container {
-      max-width: 500px;
+      max-width: 430px;
       margin: 80px auto;
       background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      padding: 45px 30px 40px 30px;
       text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .container:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5em;
-      color: #222;
+      font-size: 2.2rem;
+      margin-bottom: 0.3em;
+      color: #1a3c6c;
+      letter-spacing: 1px;
     }
     p {
-      color: #555;
-      margin-bottom: 2em;
+      color: #34495e;
+      margin-bottom: 2.2em;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
     .button {
       display: inline-block;
-      padding: 14px 36px;
-      background: #007bff;
+      padding: 15px 38px;
+      background: linear-gradient(90deg, #007bff 60%, #00d6ff 100%);
       color: #fff;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
-      font-size: 1.1em;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-      transition: background 0.2s;
+      font-size: 1.12em;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(0,123,255,0.09);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
     }
     .button:hover {
-      background: #0056b3;
+      background: linear-gradient(90deg, #0056b3 60%, #009acb 100%);
+      box-shadow: 0 4px 16px rgba(0,123,255,0.14);
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 40px 8px;
+        padding: 28px 10px 24px 10px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Velkommen!</h1>
-    <p>Dette er startsiden. Naviger videre for å utforske funksjonene.</p>
-    <a href="/trening" class="button">Kom i gang</a>
+    <h1>Trening for alle</h1>
+    <p>Velkommen til ditt enkle treningsverktøy. Trykk under for å starte!</p>
+    <a href="/Trening-for-alle/trening.html" class="button">Kom i gang</a>
   </div>
 </body>
 </html>
